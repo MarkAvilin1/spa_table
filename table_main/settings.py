@@ -2,6 +2,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import django_heroku
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -13,7 +15,7 @@ SECRET_KEY = 'goodjob'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['spa-table-app.herokuapp.com/']
 
 
 # Application definition
@@ -66,10 +68,10 @@ WSGI_APPLICATION = 'table_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Table',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1',
+        'NAME': 'dd94ebdj5cq9j9',
+        'USER': 'cfhzxiefrxarnl',
+        'PASSWORD': '55a5cf11b3565ee2e51240b486f846d27e16f30a5032e0dafbb9c538a61876fc',
+        'HOST': 'ec2-34-197-84-74.compute-1.amazonaws.com',
         'PORT': '5432',
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -112,7 +114,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
