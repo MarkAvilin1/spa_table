@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #EEE;
+}
+
+.table-content{
+    text-align: center;
+}
+
+h1 {
+    width: 100%;
+    height: 50px;
+    background: #03112d;
+    color: white;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+table, #testTmpl {
+    font-size: 1.5rem;
+    background: white;
+    text-align: left;
+    margin: 0 auto;
+    width: 700px;
+}
+
+tr:nth-child(even) {
+    background: #BBB
+}
+
+th {
+    font-weight: bold;
+    color: #03112d;
+    border-bottom: 2px solid #03112d;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    color: #03112d;
+    padding: 9px 8px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination input{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 64px;
+    padding: 30px;
+    margin-left: -60px;
+    margin-top: -60px;
+}
+
+.spiski {
+    width: fit-content;
+}
+
+.filters {
+    float: left;
+    text-align: left;
+    height: 100%;
+    background: #6678b1;
+}
+
+.filters input {
+    width: 170px;
+}
+
+#id_sorting, #id_categories, #id_condition {
+    height: 20px;
+    width: 170px;
+}
+
+#id_condition {
+    margin-left: 5px;
+}
+
+#id_choose {
+    width: 163px;
+    margin-left: 20px;
+}
